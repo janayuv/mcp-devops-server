@@ -1,0 +1,124 @@
+name: 🐛 Bug Report
+description: Report a bug or issue with the MCP DevOps Server
+title: "[BUG] "
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 🐛 Bug Report
+
+        Thanks for taking the time to report a bug! Please fill out the form below to help us understand and fix the issue.
+
+  - type: dropdown
+    id: affected-component
+    attributes:
+      label: Affected Component
+      description: Which part of the MCP server is affected?
+      options:
+        - playwright-mcp (Simple server)
+        - playwright-mcp-server (Advanced server)
+        - Documentation
+        - GitHub Actions CI/CD
+        - Installation/Setup
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: tool-affected
+    attributes:
+      label: Tool Affected (if applicable)
+      description: Which specific tool is having issues?
+      options:
+        - run_ui_tests
+        - run_accessibility_test
+        - security_audit
+        - github_workflow_validate
+        - code_quality_check
+        - performance_test
+        - docker_build_test
+        - rust_check
+        - rust_test
+        - rust_fmt_check
+        - tauri_build
+        - tauri_dev
+        - typescript_check
+        - Not tool-specific
+    validations:
+      required: false
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: A clear and concise description of the bug
+      placeholder: What happened? What did you expect to happen?
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to Reproduce
+      description: Steps to reproduce the behavior
+      placeholder: |
+        1. Go to '...'
+        2. Run command '....'
+        3. See error
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: Expected Behavior
+      description: What should happen?
+      placeholder: A clear description of what you expected to happen
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual-behavior
+    attributes:
+      label: Actual Behavior
+      description: What actually happened?
+      placeholder: What went wrong?
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Please provide details about your environment
+      value: |
+        - OS: [e.g., Windows 11, macOS 12.0, Ubuntu 20.04]
+        - Node.js Version: [e.g., 18.17.0]
+        - NPM Version: [e.g., 9.6.7]
+        - MCP Server Version: [e.g., 1.0.0]
+        - IDE: [e.g., Cursor, VS Code]
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Add any other context about the problem here
+      placeholder: Screenshots, logs, or additional information
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      description: Please check the following
+      options:
+        - label: I have searched for similar issues
+          required: true
+        - label: I have tested with the latest version
+          required: true
+        - label: I have included all relevant information
+          required: true

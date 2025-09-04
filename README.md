@@ -1,5 +1,12 @@
 # MCP DevOps Server
 
+[![CI/CD Pipeline](https://github.com/janayuv/mcp-devops-server/actions/workflows/ci.yml/badge.svg)](https://github.com/janayuv/mcp-devops-server/actions/workflows/ci.yml)
+[![Node.js Version](https://img.shields.io/badge/node-%3E%3D18.0.0-brightgreen)](https://nodejs.org/)
+[![NPM Version](https://img.shields.io/badge/npm-%3E%3D8.0.0-blue)](https://www.npmjs.com/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![GitHub Stars](https://img.shields.io/github/stars/janayuv/mcp-devops-server?style=social)](https://github.com/janayuv/mcp-devops-server)
+[![GitHub Forks](https://img.shields.io/github/forks/janayuv/mcp-devops-server?style=social)](https://github.com/janayuv/mcp-devops-server)
+
 A comprehensive **Model Context Protocol (MCP)** server providing powerful DevOps and testing tools for modern full-stack applications. Perfect for React + Vite + TailwindCSS + Rust + Shadcn + Tauri projects.
 
 ## 🚀 Features
