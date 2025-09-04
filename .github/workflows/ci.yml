@@ -26,34 +26,28 @@ jobs:
         cache: 'npm'
 
     - name: Install dependencies (playwright-mcp)
-      run: |
-        cd playwright-mcp
-        npm ci
+      working-directory: ./playwright-mcp
+      run: npm ci
 
     - name: Install dependencies (playwright-mcp-server)
-      run: |
-        cd playwright-mcp-server
-        npm ci
+      working-directory: ./playwright-mcp-server
+      run: npm ci
 
     - name: Run linting (playwright-mcp)
-      run: |
-        cd playwright-mcp
-        npm run lint:check
+      working-directory: ./playwright-mcp
+      run: npm run lint:check
 
     - name: Run linting (playwright-mcp-server)
-      run: |
-        cd playwright-mcp-server
-        npm run lint:check
+      working-directory: ./playwright-mcp-server
+      run: npm run lint:check
 
     - name: Run tests (playwright-mcp)
-      run: |
-        cd playwright-mcp
-        npm test
+      working-directory: ./playwright-mcp
+      run: npm test
 
     - name: Run tests (playwright-mcp-server)
-      run: |
-        cd playwright-mcp-server
-        npm test
+      working-directory: ./playwright-mcp-server
+      run: npm test
 
     - name: Test MCP server startup
       run: |
@@ -74,14 +68,12 @@ jobs:
         cache: 'npm'
 
     - name: Install dependencies
-      run: |
-        cd playwright-mcp-server
-        npm ci
+      working-directory: ./playwright-mcp-server
+      run: npm ci
 
     - name: Run security audit
-      run: |
-        cd playwright-mcp-server
-        npm audit --audit-level=moderate || true
+      working-directory: ./playwright-mcp-server
+      run: npm audit --audit-level=moderate || true
 
     - name: Run CodeQL Analysis
       uses: github/codeql-action/init@v3
@@ -107,13 +99,12 @@ jobs:
         cache: 'npm'
 
     - name: Install dependencies
-      run: |
-        cd playwright-mcp-server
-        npm ci
+      working-directory: ./playwright-mcp-server
+      run: npm ci
 
     - name: Build and package
+      working-directory: ./playwright-mcp-server
       run: |
-        cd playwright-mcp-server
         npm run lint
         npm test
 
