@@ -25,28 +25,13 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
 
-    - name: Install dependencies (playwright-mcp)
-      working-directory: ./playwright-mcp
+    - name: Install dependencies
       run: npm ci
 
-    - name: Install dependencies (playwright-mcp-server)
-      working-directory: ./playwright-mcp-server
-      run: npm ci
-
-    - name: Run linting (playwright-mcp)
-      working-directory: ./playwright-mcp
+    - name: Run linting
       run: npm run lint:check
 
-    - name: Run linting (playwright-mcp-server)
-      working-directory: ./playwright-mcp-server
-      run: npm run lint:check
-
-    - name: Run tests (playwright-mcp)
-      working-directory: ./playwright-mcp
-      run: npm test
-
-    - name: Run tests (playwright-mcp-server)
-      working-directory: ./playwright-mcp-server
+    - name: Run tests
       run: npm test
 
     - name: Test MCP server startup
@@ -68,12 +53,10 @@ jobs:
         cache: 'npm'
 
     - name: Install dependencies
-      working-directory: ./playwright-mcp-server
       run: npm ci
 
     - name: Run security audit
-      working-directory: ./playwright-mcp-server
-      run: npm audit --audit-level=moderate || true
+      run: npm audit --audit-level=moderate --workspaces || true
 
     - name: Run CodeQL Analysis
       uses: github/codeql-action/init@v3
@@ -99,11 +82,9 @@ jobs:
         cache: 'npm'
 
     - name: Install dependencies
-      working-directory: ./playwright-mcp-server
       run: npm ci
 
     - name: Build and package
-      working-directory: ./playwright-mcp-server
       run: |
         npm run lint
         npm test

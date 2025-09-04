@@ -1,0 +1,44 @@
+{
+  "name": "mcp-devops-server",
+  "version": "1.0.0",
+  "description": "Comprehensive MCP server with 13 DevOps tools for React + Vite + Rust + Tauri projects",
+  "main": "index.js",
+  "type": "module",
+  "workspaces": [
+    "playwright-mcp",
+    "playwright-mcp-server"
+  ],
+  "scripts": {
+    "install:all": "npm install",
+    "test": "npm run test --workspaces",
+    "lint": "npm run lint --workspaces",
+    "lint:check": "npm run lint:check --workspaces",
+    "build": "npm run build --workspaces",
+    "clean": "npm run clean --workspaces"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/janayuv/mcp-devops-server.git"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "devops",
+    "testing",
+    "react",
+    "vite",
+    "tailwindcss",
+    "rust",
+    "tauri",
+    "playwright",
+    "eslint",
+    "docker",
+    "ci-cd"
+  ],
+  "author": "Janayuv",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/janayuv/mcp-devops-server/issues"
+  },
+  "homepage": "https://github.com/janayuv/mcp-devops-server#readme"
+}
