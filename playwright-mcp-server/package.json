@@ -1,0 +1,27 @@
+{
+  "name": "playwright-mcp-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "node ../playwright-mcp/test-mcp-protocol.js",
+    "lint": "npx eslint index.js --fix",
+    "lint:check": "npx eslint index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.17.5",
+    "@playwright/test": "^1.55.0",
+    "axe-core": "^4.10.3"
+  },
+  "devDependencies": {
+    "eslint": "^9.0.0",
+    "js-yaml": "^4.1.0",
+    "lighthouse": "^12.0.0",
+    "typescript": "^5.0.0"
+  }
+}
