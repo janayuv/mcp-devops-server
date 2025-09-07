@@ -1,0 +1,18 @@
+{
+  "name": "mcp-cicd",
+  "version": "1.0.0",
+  "description": "Local CI/CD orchestrator",
+  "main": "mcp-server.js",
+  "scripts": {
+    "start:mcp": "node mcp-server.js",
+    "ci:local": "powershell -NoProfile -ExecutionPolicy Bypass -File ./ci.ps1",
+    "deploy:local": "powershell -NoProfile -ExecutionPolicy Bypass -File ./deploy.ps1",
+    "lint": "echo 'linting'",
+    "test": "echo 'testing'",
+    "build": "if not exist dist mkdir dist && echo 'built' > dist/index.js"
+  },
+  "dependencies": {
+    "express": "^4.18.0",
+    "uuid": "^9.0.0"
+  }
+}
