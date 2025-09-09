@@ -1,0 +1,20 @@
+{
+  "mcpServers": {
+    "cicd-orchestrator": {
+      "command": "node",
+      "args": ["mcp-cursor-server.js"],
+      "cwd": "D:\\tools\\CICD",
+      "env": {
+        "NODE_ENV": "development"
+      }
+    },
+    "playwright-mcp": {
+      "command": "node",
+      "args": ["index.js"],
+      "cwd": "D:\\tools\\playwright-mcp-server",
+      "env": {
+        "NODE_ENV": "development"
+      }
+    }
+  }
+}
