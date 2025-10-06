@@ -41,7 +41,7 @@
     "@playwright/experimental-ct-react": "^1.55.0",
     "@storybook/react": "^8.4.0",
     "@storybook/addon-essentials": "^8.4.0",
-    "storybook": "^8.4.0",
+    "storybook": "^9.1.10",
     "chromatic": "^11.0.0",
     "@percy/cli": "^1.28.5"
   }
