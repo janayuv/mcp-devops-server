@@ -42,7 +42,7 @@
     "@storybook/react": "^8.4.0",
     "@storybook/addon-essentials": "^8.4.0",
     "storybook": "^8.4.0",
-    "chromatic": "^11.0.0",
+    "chromatic": "^13.3.2",
     "@percy/cli": "^1.28.5"
   }
 }
