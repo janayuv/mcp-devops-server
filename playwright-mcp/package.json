@@ -14,7 +14,7 @@
     "@modelcontextprotocol/sdk": "^1.17.4"
   },
   "devDependencies": {
-    "eslint": "^9.0.0"
+    "eslint": "^9.39.1"
   },
   "keywords": ["mcp", "playwright", "testing"],
   "author": "Import Manager",
