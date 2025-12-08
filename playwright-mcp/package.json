@@ -11,7 +11,7 @@
     "lint:check": "npx eslint index.js test-client.js test-mcp-protocol.js"
   },
   "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.17.4"
+    "@modelcontextprotocol/sdk": "^1.24.3"
   },
   "devDependencies": {
     "eslint": "^9.0.0"
